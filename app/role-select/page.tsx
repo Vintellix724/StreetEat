@@ -157,8 +157,7 @@ export default function RoleSelectionScreen() {
         className="mt-auto pt-8 pb-4 flex justify-center shrink-0"
       >
         <Link 
-          href="https://admin.streeteats.app" 
-          target="_blank"
+          href="/admin-login" 
           className="font-dm-sans text-[13px] text-[#A0A0A0] border-b border-dashed border-[#555] pb-0.5 hover:text-white hover:border-[#888] transition-colors"
         >
           Admin portal →

@@ -181,7 +181,7 @@ export default function VendorOnboardingScreen() {
                 >
                   {stallPhoto ? (
                     <>
-                      <img src={stallPhoto} alt="Stall" className="w-full h-full object-cover rounded-[18px]" />
+                      <Image src={stallPhoto} alt="Stall" fill className="object-cover rounded-[18px]" unoptimized />
                       <button 
                         onClick={(e) => { e.stopPropagation(); fileInputRef1.current?.click(); }}
                         className="absolute bottom-[-10px] right-[-10px] w-[32px] h-[32px] bg-[#FF6B00] rounded-full flex items-center justify-center border-2 border-[#0A0A14] shadow-md"
@@ -427,7 +427,7 @@ export default function VendorOnboardingScreen() {
                 >
                   {itemPhoto ? (
                     <>
-                      <img src={itemPhoto} alt="Item" className="w-full h-full object-cover" />
+                      <Image src={itemPhoto} alt="Item" fill className="object-cover" unoptimized />
                       <button 
                         onClick={(e) => { e.stopPropagation(); setItemPhoto(null); }}
                         className="absolute top-[8px] right-[8px] w-[28px] h-[28px] bg-red-500/90 rounded-full flex items-center justify-center border border-[#0A0A14]"

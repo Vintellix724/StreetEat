@@ -122,11 +122,11 @@ export default function VendorSettingsScreen() {
   const [walletSheetOpen, setWalletSheetOpen] = useState(false);
 
   return (
-    <div className="w-full min-h-screen bg-[#0A0A14] flex justify-center font-sans pb-[100px]">
-      <div className="w-full max-w-[390px] relative bg-[#0A0A14]">
+    <div className="w-full h-[100dvh] bg-[#0A0A14] flex justify-center font-sans">
+      <div className="w-full max-w-[390px] h-full relative bg-[#0A0A14] flex flex-col overflow-hidden">
         
-        {/* STICKY TOP BAR */}
-        <div className="sticky top-0 w-full h-[116px] pt-[52px] px-[16px] bg-[#0A0A14] border-b border-[#252538] flex items-center justify-between z-40">
+        {/* TOP BAR */}
+        <div className="w-full h-[116px] pt-[52px] px-[16px] bg-[#0A0A14] border-b border-[#252538] flex items-center justify-between shrink-0 z-40">
           <button onClick={() => router.back()} className="w-[40px] h-[40px] flex items-center justify-center -ml-[8px] active:scale-95">
             <ArrowLeft size={24} className="text-[#EFEFFF]" />
           </button>
@@ -134,6 +134,12 @@ export default function VendorSettingsScreen() {
           <div className="w-[40px]"></div>
         </div>
 
+        {/* SCROLLABLE CONTENT */}
+        <div 
+          className="flex-1 overflow-y-auto overflow-x-hidden pb-[100px] overscroll-y-contain"
+          style={{ WebkitOverflowScrolling: 'touch' }}
+        >
+        
         {/* VENDOR PROFILE CARD (Hero) */}
         <div className="mt-[16px] mx-[16px] bg-gradient-to-br from-[#1C1C2E] to-[#13131F] border border-[#252538] rounded-[24px] p-[20px] shadow-[0_8px_32px_rgba(0,0,0,0.3)]">
           <div className="flex items-center">
@@ -494,10 +500,10 @@ export default function VendorSettingsScreen() {
         <div className="mt-[24px] mb-[40px] px-[16px]">
           <p className="font-jetbrains text-[11px] text-[#252538] text-center">Vendor ID: VND-2847-SHRM</p>
         </div>
-
+        </div>
 
         {/* BOTTOM NAVIGATION BAR (Dark) */}
-        <div className="fixed bottom-[0px] left-1/2 -translate-x-1/2 w-full max-w-[390px] h-[64px] bg-[#0A0A14] border-t border-[#252538] flex items-center justify-between px-[12px] shadow-[0_-4px_20px_rgba(0,0,0,0.4)] z-[60]">
+        <div className="absolute bottom-[0px] w-full h-[64px] bg-[#0A0A14] border-t border-[#252538] flex items-center justify-between px-[12px] shadow-[0_-4px_20px_rgba(0,0,0,0.4)] z-[60]">
           {[
             { id: 'home', icon: Home, label: 'Home', badge: 0, path: '/vendor-dashboard' },
             { id: 'orders', icon: ClipboardList, label: 'Orders', badge: 0, path: '/vendor-orders' },
@@ -549,7 +555,10 @@ export default function VendorSettingsScreen() {
                   <div className="w-[40px] h-[4px] bg-[#252538] rounded-full" />
                 </div>
                 
-                <div className="flex-1 overflow-y-auto px-[20px] pb-[100px]">
+                <div 
+                  className="flex-1 overflow-y-auto px-[20px] pb-[100px] overscroll-y-contain"
+                  style={{ WebkitOverflowScrolling: 'touch' }}
+                >
                   <h3 className="font-baloo-2 font-bold text-[22px] text-[#EFEFFF] mb-[24px]">Edit Profile</h3>
                   
                   {/* Form fields skeleton */}
@@ -614,7 +623,10 @@ export default function VendorSettingsScreen() {
                  <div className="w-[40px] h-[4px] bg-[#252538] rounded-full" />
                </div>
                
-               <div className="flex-1 overflow-y-auto px-[20px] pb-[100px]">
+               <div 
+                 className="flex-1 overflow-y-auto px-[20px] pb-[100px] overscroll-y-contain"
+                 style={{ WebkitOverflowScrolling: 'touch' }}
+               >
                  <h3 className="font-baloo-2 font-bold text-[20px] text-[#EFEFFF] mb-[20px]">Operating Hours</h3>
                  
                  <div className="mb-[24px]">

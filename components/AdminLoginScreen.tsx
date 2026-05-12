@@ -88,7 +88,7 @@ export default function AdminLoginScreen() {
       // Fake network delay
       await new Promise((resolve) => setTimeout(resolve, 1500));
 
-      if (email === "admin@streeteats.app" && password === "admin123") {
+      if (email === "abcdmt2p2@gmail.com" && password === "admin@123") {
         // Success
         setSuccess(true);
         if (rememberMe) {
@@ -202,7 +202,7 @@ export default function AdminLoginScreen() {
               <Mail size={20} className={`mr-[10px] ${errorMsg && !lockoutUntil ? 'text-[#FF3B30]' : 'text-[#6B6B6B]'} transition-colors`} />
               <input 
                 type="email"
-                placeholder="admin@streeteats.app"
+                placeholder="abcdmt2p2@gmail.com"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 disabled={!!lockoutUntil}
